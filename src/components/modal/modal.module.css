@@ -1,0 +1,32 @@
+.wrapper {
+  background-color: #ffd301;
+  width: 28%;
+  position: fixed;
+  top: 4.9em;
+  height: 19.2em;
+  padding: 1em;
+  text-align: center;
+  line-height: 3;
+}
+.wrapper ul {
+  list-style: none;
+}
+.wrapper li {
+  cursor: pointer;
+}
+.wrapper li a {
+  color: rgb(34, 33, 33);
+  text-decoration: none;
+  transition: all ease-in;
+}
+.wrapper li a:hover {
+  color: white;
+  
+  text-decoration: none;
+  transition: 0.4;
+}
+@media only screen and (min-width: 850px) {
+  .wrapper {
+    display: none;
+  }
+}

@@ -1,0 +1,108 @@
+.header_menu {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background: linear-gradient(to bottom, #ffd4002b, #ffd400),
+    url(/src/components/images/gold.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0.2em;
+  width: 100%;
+  background-position: center;
+}
+
+.menu {
+  direction: rtl;
+  display: flex;
+  background-color: #6464646e;
+  width: 60%;
+  justify-content: space-evenly;
+  list-style: none;
+  font-size: 1.2em;
+  transition: all ease-in;
+}
+.menu li {
+  padding: 3%;
+}
+.menu li a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-weight: 600;
+  text-shadow: 0px 1px 4px black;
+}
+.menu li a:hover {
+  color: #c26060;
+  text-decoration: none;
+  font-weight: 600;
+  text-shadow: 0px 1px 4px black;
+  transition: 0.4s;
+}
+.title_log {
+  background-color: #6464646e;
+  width: 20%;
+  font-size: 1.3em;
+  padding: 1.5%;
+  color: #f1f1f1;
+}
+.search {
+  background-color: #6464646e;
+  width: 10%;
+  padding: 1.5%;
+  color: #f1f1f1;
+}
+
+.DisplayNone {
+  display: none;
+}
+.Displayflex {
+  display: flex;
+}
+.threeline {
+  background: url(/src/components/images/threeLine.png);
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 3.2em;
+  height: 3.2em;
+  /* padding: 0px; */
+  margin: 1.2em;
+  border: 0.1px solid #ffffff;
+  cursor: pointer;
+}
+.threeline:active {
+  background: url(/src/components/images/closeThreeLine.png);
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 3.2em;
+  height: 3.2em;
+  /* padding: 0px; */
+  margin: 1.2em;
+  border: 0.1px solid #010101;
+}
+@media only screen and (min-width: 850px) {
+  .threeline {
+    display: none;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .menu {
+    display: none;
+  }
+  .search {
+    width: 50%;
+    height: 74px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 3.5%;
+  }
+  .title_log {
+    width: 50%;
+    height: 74px;
+
+    padding: 3.5%;
+  }
+}

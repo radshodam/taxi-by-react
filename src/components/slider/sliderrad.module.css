@@ -1,0 +1,45 @@
+.rootslider {
+  direction: ltr;
+}
+.rootslider h2 {
+  background-color: coral;
+  color: antiquewhite;
+  font-size: 12vw;
+}
+.rootslideritem {
+  height: 100vh;
+}
+.rootslideritem img {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.legend {
+  transition: all .5s ease-in-out;
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  margin-left: -25%;
+  width: 50%;
+  border-radius: 10px;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  opacity: 0.8;
+  height: 279px;
+  transition: opacity .35s ease-in-out;
+}
+.legend h3{
+font-size: 5vh;
+line-height: 2;
+}
+.legend p{
+font-size: 17px;
+line-height: 1.5;
+}
+
+.carousel:hover .slide .legend {
+    opacity: 1;
+}

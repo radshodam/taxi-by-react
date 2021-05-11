@@ -1,0 +1,24 @@
+.text_head {
+  text-align: center;
+  font-size: 3em;
+  text-shadow: 1px 1px 1px #303030;
+  color: #ffd400;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.dflex {
+  direction: rtl;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.dflex img {
+  width: 250px;
+}
+
+.w750 {
+  width: 725px;
+  line-height: 2;
+  padding: 17px;
+}
