@@ -34,9 +34,9 @@ const Footer = () => {
       <>
         <ul className={styles.cards}>
           <img src={etemad} alt="#" className={styles.w200} />
-          {names.map((item) => {
+          {names.map((item , index) => {
             return (
-              <DetailsFooter key={item.id}  {...item}/>
+              <DetailsFooter key={index}  {...item}/>
                   
             );
           })}

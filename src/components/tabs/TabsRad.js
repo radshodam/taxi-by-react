@@ -28,7 +28,6 @@ class tab extends React.Component {
 
           <Tab label="مسولین و مدیران">
             <div>
-              {/* <img src="https://iconcept.com.my/wp-content/uploads/2018/10/iStock-956508212-600x600.jpg"/> */}
               <Managers />
             </div>
           </Tab>

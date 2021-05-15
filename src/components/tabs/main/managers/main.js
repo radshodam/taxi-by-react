@@ -75,6 +75,10 @@ const List = () => {
   const handleClose = () => {
     setShow(false);
   };
+
+  const closeBody = () => {
+    setShow(false);
+  };
   return (
     <div>
       <>
@@ -82,9 +86,9 @@ const List = () => {
           {/* {eng.product} */}اسامی و مشخصات مسولین
         </h3>
         <ul className={styles.cards}>
-          {productList.map((item) => {
+          {productList.map((item , index) => {
             return (
-              <li key={item.id} className={styles.itemcards}>
+              <li key={index} className={styles.itemcards}>
                 <div className={styles.pd}>
                   {item.name} {item.lastName}
                 </div>
@@ -103,7 +107,9 @@ const List = () => {
             );
           })}
         </ul>
-        <Modal show={show} details={details} onClose={handleClose} />
+        <Modal show={show} details={details} onClose={handleClose}>
+          {closeBody}
+        </Modal>
       </>
     </div>
   );

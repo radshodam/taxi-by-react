@@ -53,9 +53,9 @@ const WhyTaxi = () => {
           یه نگاهی بندازیم ببینیم واقعا چرا باید لایکسی رو انتخاب کنیم؟
         </h3>
         <ul className={styles.cards}>
-          {names.map((item) => {
+          {names.map((item,index) => {
             return (
-              <li key={item.id} className={styles.itemcards}>
+              <li key={index} className={styles.itemcards}>
                 <div className={styles.cardsTitle}>{item.name}</div>
                 <div className={styles.cardsPrice}> {item.desceiption}</div>
               </li>

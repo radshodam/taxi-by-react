@@ -5,10 +5,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #0000006c;
+  background: #00000082;
   height: 100vh;
+  z-index: 99999;
+
 }
 .modalItem {
+  width: 390px;
   position: fixed;
   left: 50%;
   top: 50%;

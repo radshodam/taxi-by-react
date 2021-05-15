@@ -1,53 +1,53 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import styles from "./menu.module.css";
 import ListTop from "./ListTop";
 import Modal from "../modal/Modal";
-class Menu extends React.Component {
-  constructor(props) {
-    super(props);
+import { ThemeContext } from "../context/ThemeContext";
+import sun from '../images/sun.png';
+import moon from "../images/moon.png"
+const lists = [
+  { name: "تاکسی در یک نگاه", href: "#home" },
+  { name: "دانلود اپلیکیشن", href: "#app" },
+  { name: "حامیان ما", href: "#advorcate" },
+  { name: "تماس با ما", href: "#contact" },
+  { name: "درباره ی ما", href: "#about" },
+];
+const Menu = () => {
+  //  const [lists, setLists] = useState(lists)
+  const [modal, setModal] = useState(false);
+  const [theme, setTheme] = useContext(ThemeContext);
 
-    this.state = {
-      lists: [
-        { name: "تاکسی در یک نگاه", href: "/home" },
-        { name: "دانلود اپلیکیشن", href: "#app" },
-        { name: "حامیان ما", href: "#advorcate" },
-        { name: "تماس با ما", href: "#contact" },
-        { name: "درباره ی ما", href: "#about" },
-      ],
-      modal: false,
-    };
-    this.handleModal = this.handleModal.bind(this);
-  }
-
-  handleModal = () => {
-    this.setState((state) => ({
-      modal: !state.modal,
-    }));
+  const handleModal = () => {
+    setModal(!modal);
   };
 
-  render() {
-    return (
-      <div className={styles.header_menu}>
-        <h3 className={styles.title_log}>۰۵۲۴-۱۱۲</h3>
-        <ul className={styles.menu}>
-          {this.state.lists.map((n, index) => {
-            return (
-              <>
-                <ListTop key={index} {...n} />
-              </>
-            );
-          })}
-        </ul>
-        <h3 className={styles.search}>لوگوی شرکت</h3>
-        <button
-          type="button"
-          className={styles.threeline}
-          onClick={this.handleModal}
-        ></button>
-        <Modal modal={this.state.modal} menu={this.state.lists} />
+  const handleTheme = () => {
+    setTheme(!theme);
+  };
+  return (
+    <div className={styles.header_menu}>
+      <div className={styles.title_log}>
+        ۰۵۲۴-۱۱۲
+        <button onClick={handleTheme} className={theme?styles.btnLightNight:styles.btnLightlight}>{theme ?<img src={sun} alt="khorshid"/>:<img src={moon} alt="khorshid"/>}</button>
       </div>
-    );
-  }
-}
+      <ul className={styles.menu}>
+        {lists.map((n, index) => {
+          return (
+            <>
+              <ListTop key={index} {...n} />
+            </>
+          );
+        })}
+      </ul>
+      <div className={styles.search}></div>
+      <button
+        type="button"
+        className={styles.threeline}
+        onClick={handleModal}
+      ></button>
+      <Modal modal={modal} menu={lists} />
+    </div>
+  );
+};
 
 export default Menu;

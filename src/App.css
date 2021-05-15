@@ -1,4 +1,5 @@
 * {
+  width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -75,7 +76,11 @@
 }
 
 body {
-  width: 100%;
   overflow-x: hidden;
   font-family: "IRANSans";
+}
+
+.dark{
+  background-color: #333333;
+  color: white;
 }

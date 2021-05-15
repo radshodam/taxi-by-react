@@ -50,9 +50,9 @@ const Advocate = () => {
       <>
         <h3 className={styles.text_head} id="advorcate">حامیان ما </h3>
         <ul className={styles.cards}>
-          {names.map((item) => {
+          {names.map((item , index) => {
             return (
-              <li key={item.id} className={styles.itemcards}>
+              <li key={index} className={styles.itemcards}>
                 <div className={styles.pdd}>{item.name}</div>
                 <img src={item.src} alt={item.title} className={styles.w200} />
                 <div className={styles.bottomCards}></div>

@@ -19,13 +19,15 @@
   margin-bottom: 50px;
   border-bottom: 1px solid #c6a114;
 }
- .button {
+.button {
   margin-right: 15px;
-  font-size: 20px;
+  font-family: "IRANSans";
+  font-size: 15px;
   background: transparent;
   border: none;
   outline: none;
   padding: 10px 20px;
+  font-weight: 600;
   cursor: pointer;
   color: white;
   transition: all ease-in-out 0.2s;

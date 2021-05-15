@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./modal.module.css";
-const Modal = ({ show, details, onClose }) => {
+const Modal = ({ show, details, onClose ,children }) => {
   return (
-    <>
+    <div onClick={children}>
       {show ? (
         <div className={styles.modalWrapper}>
           <div className={styles.modalItem}>
@@ -25,7 +25,7 @@ const Modal = ({ show, details, onClose }) => {
           </div>
         </div>
       ) : null}
-    </>
+    </div>
   );
 };
 
