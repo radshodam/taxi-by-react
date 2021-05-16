@@ -15,6 +15,7 @@ const SliderRad = () => {
         infiniteLoop={true}
         autoPlay={true}
         autoFocus={true}
+        showArrows={false}
       >
         <div className={styles.rootslideritem}>
           <img src={oneImage} alt="onetaxi" />
